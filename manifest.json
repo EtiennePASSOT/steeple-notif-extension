@@ -1,0 +1,21 @@
+{
+  "name": "Steeple Desktop Notifications",
+  "version": "0.0.0.1",
+  "description": "Chrome extension to display desktop notifications for Steeple",
+  "manifest_version": 3,
+  "icons": { "16": "logo.png", "48": "logo.png", "128": "logo.png" },
+  "author": "Etienne PASSOT",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Configuration"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>",
+    "*://*.steeple-dev.fr/*",
+    "*://steeple-dev.fr/*"
+  ],
+  "permissions": ["webRequest", "scripting"]
+}
